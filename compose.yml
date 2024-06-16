@@ -1,0 +1,16 @@
+volumes:
+  db_data:
+
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=IC5O36OhXEHnYvt5byjhC5ydyogoihBI
+      - MYSQL_PASSWORD=u3pHvE7ogyZv2Y2yBQ4InoQrSVyEp7D1
+      - MYSQL_DATABASE=template_auth
+      - MYSQL_USER=template_auth
+    ports:
+      - 3306:3306
